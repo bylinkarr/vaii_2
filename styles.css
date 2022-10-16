@@ -110,7 +110,8 @@ body
     background-image: url("img/bg-dog.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
+    background-position: center center;
     opacity: 0.5;
     top: 58px;
     left: 0;
@@ -190,6 +191,7 @@ body
     padding-top: 2%;
     position: relative;
     bottom: 0;
+    float: left;
 }
 .nn
 {
@@ -283,10 +285,65 @@ input[type=submit]:hover {
 
 .formular
 {
-    display: flex;
-    position: relative;
+
     margin: 3%;
 }
+
+.casti
+{
+    display: inline-grid;
+    padding: 10% 5% 5% 20%;
+    position: relative;
+    float: left;
+}
+
+.casti input
+{
+    margin: 2%;
+    background-color: #cfd7ff;
+    border-radius: 10%;
+    padding: 4%;
+    font-weight: bolder;
+    width: 100%;
+
+}
+
+.imgs
+{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    position: relative;
+    float: left;
+    padding-left: 30%;
+    padding-top: 5%;
+    background-repeat: no-repeat;
+    background-image: url("img/horses.jpg");
+    background-position: center center;
+    animation: xd 10s infinite;
+}
+.button {
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-style: oblique;
+    padding: 15px 32px;
+    margin-left: 15%;
+    border: none;
+    border-radius: 20%;
+    float: left;
+    position: relative;
+}
+@keyframes xd {
+    0%   {background-image: url("img/horses.jpg");}
+    50%  {background-image: url("img/prasce.jpg");}
+    70%  {background-image: url("img/horse.jpg");}
+    100%   {background-image: url("img/horses.jpg");}
+
+}
+
+/* The element to apply the animation to */
 @media only screen and (max-width: 650px) {
     .menu {
         display: inline-block;
@@ -310,7 +367,7 @@ input[type=submit]:hover {
 
     }
 
-    .title-text ,.tb, .tabulka{
+    .title-text ,.tb, .tabulka,.formular{
         padding-top: 120px;
         margin: 0;
     }
@@ -322,7 +379,13 @@ input[type=submit]:hover {
         margin: 0;
         justify-content:  center;
     }
+    .casti
+    {
+        padding: 5%;
+        justify-content: center;
+    }
 }
+
 
 
 @media only screen and (max-width: 268px) {
@@ -330,11 +393,13 @@ input[type=submit]:hover {
     .pwd
     {
         display: block;
+        padding-bottom: 2%;
     }
     select
     {
         width: 100%;
         margin: 0;
+
     }
 
     .nn {
@@ -370,6 +435,7 @@ input[type=submit]:hover {
      .title-button
      {
          margin: 0;
+
      }
      .title-img::before
      {
@@ -379,6 +445,10 @@ input[type=submit]:hover {
      .title-img
      {
          height: auto;
+     }
+     .formular,.tb
+     {
+         padding: 0;
      }
 
 }
