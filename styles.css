@@ -46,7 +46,6 @@ body
     background-color: orange;
     display: flex;
     text-align: center;
-    position: center;
 
 }
 
@@ -197,32 +196,68 @@ body
     display: flex;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #ddd;
 
-}
 
-th, td {
-    text-align: left;
+th,td {
+    text-align: center;
     padding: 16px;
-    background-color: lightgray;
+    border: 2px solid #45a049;
+
 }
+
+.tabulka tr:nth-child(2n+1)
+{
+
+   background-color: orange;
+}
+
+.tabulka tr:nth-child(2n)
+{
+    background-color: #ffe2f2;
+}
+
+.tabulka tr:first-child
+{
+    background-color: #cfd7ff;
+}
+
+.tabulka tr:hover {
+    background-color: red;
+}
+
 
 .tabulka
 {
+    border-collapse: collapse;
+    width: 100%;
+    border: 5px solid firebrick;
     position: relative;
+
+}
+.tb{
+    margin: 3%;
+}
+.tbb
+{
+    overflow-x:auto;
+}
+.pwd
+{
+   display: flex;
 }
 
+
 input[type=text], select {
-    width: 100%;
+    width: 30%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 10px;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 3px solid darkslategray;
+    border-radius: 5px;
+    font-weight: bold;
     box-sizing: border-box;
+    background-color: #cfd7ff;
+
 }
 
 input[type=submit] {
@@ -246,10 +281,24 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
+.formular
+{
+    display: flex;
+    position: relative;
+    margin: 3%;
+}
 @media only screen and (max-width: 650px) {
     .menu {
         display: inline-block;
 
+    }
+    .pwd
+    {
+        display: block;
+    }
+    select
+    {
+        width: 50%;
     }
 
     .logo-img {
@@ -261,9 +310,9 @@ input[type=submit]:hover {
 
     }
 
-    .title-text {
+    .title-text ,.tb, .tabulka{
         padding-top: 120px;
-
+        margin: 0;
     }
 
     .img-left
@@ -274,7 +323,19 @@ input[type=submit]:hover {
         justify-content:  center;
     }
 }
+
+
 @media only screen and (max-width: 268px) {
+
+    .pwd
+    {
+        display: block;
+    }
+    select
+    {
+        width: 100%;
+        margin: 0;
+    }
 
     .nn {
         width: 100%;
@@ -300,7 +361,7 @@ input[type=submit]:hover {
      {
          position: relative;
      }
-     .title-text, .under-text,.right-text,.nadpis1
+     .title-text, .under-text,.right-text,.nadpis1,h4
      {
          padding: 0;
          font-size: medium;
