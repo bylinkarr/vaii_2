@@ -1,0 +1,227 @@
+body
+{
+
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+}
+
+html
+{
+    margin: 0;
+}
+.nav
+{
+    list-style: none;
+    display: flex;
+    background-color: darkslategray;
+    margin : 0;
+    padding: 0;
+}
+.menu-item
+{
+    display: flex;
+    margin: 20px;
+    float: left;
+
+
+}
+
+.menu-item a
+{
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    font-style: oblique;
+
+}
+
+.menu-item a:hover
+{
+    color: lightsteelblue;
+}
+
+.logo
+{
+    background-color: orange;
+    display: flex;
+    text-align: center;
+    position: center;
+
+}
+
+.text
+{
+   padding-top: 20px;
+    font-weight: bolder;
+
+
+}
+.logo-img
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    width: 100px;
+    height: 50px;
+}
+.menu
+{
+    display: flex;
+    list-style: none;
+    background-color: darkslategray;
+    position: fixed;
+    z-index:1;
+    width: 100%;
+    overflow: auto;
+
+
+}
+
+.title-text
+{
+    position:relative;
+
+    padding-left: 20%;
+    padding-top: 10%;
+    font-size: 50px;
+    font-weight: bolder;
+    display: flex;
+    top: inherit;
+
+}
+
+.nav ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.title-img
+{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+
+}
+.title-img::before {
+    content: "";
+    background-image: url("img/bg-dog.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    top:58px;
+    left:0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.under-text
+{
+    padding-left: 20%;
+    font-size : larger;
+    color: darkslategray;
+    font-weight: bold;
+    padding-right: 25%;
+
+
+}
+
+.title-button
+{
+    background-color: darkslategray;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    font-style: oblique;
+    padding: 15px 32px;
+    margin-left: 20%;
+    border: none;
+    border-radius: 20%;
+    display: flex;
+}
+
+.img-left
+{
+    padding: 5%  10% 5% 10%;
+    float: left;
+
+}
+.flex
+{
+    padding-bottom: 10%;
+    height: auto;
+    width: 100%;
+}
+
+.nadpis1
+{
+    padding-left: 12%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    margin: 0;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.right-text
+{
+    padding-left: 12%;
+    padding-right: 10%;
+    font-size : medium;
+    color: darkslategray;
+    font-weight: bold;
+
+}
+
+.foot
+{
+    width: 100%;
+    background-color: darkslategray;
+    color: darkgray;
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    height: auto;
+
+}
+.k
+{
+    background-size: cover;
+}
+
+@media only screen and (max-width: 650px) {
+    .menu {
+        display: block;
+    }
+
+    .logo-img {
+        padding: 0;
+    }
+
+    .logo, .nav {
+        justify-content: center;
+
+    }
+
+    .title-text {
+        padding-top: 150px;
+    }
+
+    .img-left
+    {
+        width: 100%;
+    }
+}
+
+
+
+
+
