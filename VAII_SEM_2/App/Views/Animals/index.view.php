@@ -27,8 +27,8 @@ use App\Models\Animal;
                 <td><?php echo $animal->getDayOfBirth()?></td>
                 <td><?php echo $animal->getWeight()?></td>
                     <td>
-                        <a href="?c=animals&a=edit&id=<?php echo $animal->getId()?>" class="edit" title="Edit" data-toggle="tooltip"><i class="bi bi-x-circle-fill"></i></a>
-                        <a href="?c=animals&a=delete&id=<?php echo $animal->getId()?>"    class="delete" title="Delete" data-toggle="tooltip"><i class="bi bi-pencil-fill"></i></a>
+                        <a href="?c=animals&a=edit&id=<?php echo $animal->getId()?>" class="edit" title="Edit" data-toggle="tooltip"><i class="bi bi-pencil-fill"></i></i></a>
+                        <a href="?c=animals&a=delete&id=<?php echo $animal->getId()?>"    class="delete" title="Delete" data-toggle="tooltip"><i class="bi bi-x-circle-fill"></i></a>
                     </td>
             </tr>
             <?php } ?>

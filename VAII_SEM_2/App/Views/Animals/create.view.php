@@ -22,13 +22,12 @@
         </div>
         <label for="date" class="sr-only">Dátum</label>
         <div class="col-sm-2 mx-auto">
-            <input name="date" type="text" id="date" class="form-control " value="<?php echo $data->getDayOfBirth()?>" placeholder="dd-mm-yyyy" required>
+            <input name="date" type="date" id="date" class="form-control " value="<?php echo $data->getDayOfBirth()?>" placeholder="YYYY-MM-DD" >
         </div>
         <label for="weight" class="sr-only">Hmotnosť</label>
         <div class="col-sm-2 mx-auto">
             <input name="weight" type="number" id="weight" class="form-control " value="<?php echo $data->getWeight()?>" placeholder="Váha" >
         </div>
         <button class="btn btn-lg btn-primary btn-block m-3" type="submit" name="submit">Pridaj</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
 </div>

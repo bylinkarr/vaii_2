@@ -290,7 +290,7 @@ input[type=text], select {
     padding-left: 30%;
     padding-top: 5%;
     background-repeat: no-repeat;
-    
+
     background-position: center center;
     animation: xd 10s infinite;
     overflow-x: auto;
