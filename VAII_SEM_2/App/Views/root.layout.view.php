@@ -26,14 +26,14 @@
                 _title="<?= \App\Config\Configuration::APP_NAME ?>">
                 </a>
         <a href="?c=home">Home</a>
-        <a href="?c=home&a=contact">Contact</a>
     <?php if (!$auth->isLogged()) { ?>
         <a href="<?= \App\Config\Configuration::REGISTER_URL ?>">Register</a>
     <?php } ?>
         <?php if ($auth->isLogged()) { ?>
+            <a href="?c=home&a=reg">Formulár pre registráciu</a>
             <a class="signout" href="?c=auth&a=logout">Odhlásenie</a>
             <span class="txt">Prihlásený používateľ: <b><?= $auth->getLoggedUserName() ?></b></span>
-                    <a href="?c=matches">Registracia</a>
+                    <a href="?c=matches">Zápasy</a>
                      <a href="?c=animals">Zvieratá</a>
 
 

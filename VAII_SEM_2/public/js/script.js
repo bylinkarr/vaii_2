@@ -1,14 +1,16 @@
 window.onload = function () {
-     const username = document.getElementById("username");
-     const password = document.getElementById("password");
-     const form = document.getElementById("form");
-     const errorEl = document.getElementById("error");
-     const  gpw =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{7,24}$/;
+    const form = document.getElementById("form");
+    const formc = document.getElementById("formc");
+
+
     if (form !== null) {
 
         form.addEventListener('submit', (e) => {
             let messages = []
-
+            const username = document.getElementById("username");
+            const password = document.getElementById("password");
+            const errorEl = document.getElementById("error");
+            const  gpw =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{7,24}$/;
             if (username.value === '' || username.value == null) {
                 messages.push("Username pole nemože byť prázdne")
             } else {
@@ -38,21 +40,14 @@ window.onload = function () {
             }
         })
     }
-
-}
-window.onload = function () {
-    const formc = document.getElementById("formc");
-    const errorEl = document.getElementById("error");
-    const  meno = document.getElementById("meno");
-    const  date = document.getElementById("date");
-    const  weight = document.getElementById("weight");
-    const letters = /^[A-Za-z].{2,14}$/
-    const dd =/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/
-
-
     if (formc != null) {
         formc.addEventListener('submit', (e) => {
-
+            const errorEl = document.getElementById("error");
+            const meno = document.getElementById("meno");
+            const date = document.getElementById("date");
+            const weight = document.getElementById("weight");
+            const letters = /^[A-Za-z].{2,14}$/
+            const dd = /^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/
             let messages = []
 
 
