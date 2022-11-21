@@ -19,6 +19,5 @@ $layout = 'root';
             <input name="password" type="password" id="password" class="form-control " placeholder="Password">
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
 </div>
