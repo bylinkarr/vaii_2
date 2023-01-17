@@ -51,10 +51,7 @@ class AuthController extends AControllerBase
         $logged = null;
         if (isset($formData['submit'])) {
             $logged = $this->app->getAuth()->login($formData['username'], $formData['password']);
-            if ($logged && $this->app->getAuth()->isAdmin()) {
-                return $this->redirect('?c=admin');
-            }
-            else if($logged && !$this->app->getAuth()->isAdmin())
+            if($logged && !$this->app->getAuth()->isAdmin())
             {
                 return $this->redirect('?c=home');
             }

@@ -37,7 +37,7 @@ $layout = 'root';
                 </div>
                 <div class="col-sm-2 mx-auto">
                     <label for="city" class="sr-only">Mesto</label>
-                    <input name="Mesto" type="text" id="city" class="form-control " placeholder="Mesto">
+                    <input name="Mesto" type="text" id="city" class="form-control" placeholder="Mesto">
                 </div>
             </div>
         </div>
