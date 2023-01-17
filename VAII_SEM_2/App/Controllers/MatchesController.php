@@ -108,6 +108,7 @@ class MatchesController extends  AControllerBase
                     return $this->html($data);
                 }
                 $new_match->save();
+
                 return $this->redirect('?c=matches');
             }
         }

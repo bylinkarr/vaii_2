@@ -6,7 +6,7 @@ use App\Core\Model;
 
 class Tournament extends Model
 {
-    protected $placement;
+    protected $id;
     protected $name;
     protected $date;
     protected $city;
@@ -14,17 +14,17 @@ class Tournament extends Model
     /**
      * @return mixed
      */
-    public function getPlacement()
+    public function getId()
     {
-        return $this->placement;
+        return $this->id;
     }
 
     /**
-     * @param mixed $placement
+     * @param mixed $id
      */
-    public function setPlacement($placement): void
+    public function setId($id): void
     {
-        $this->placement = $placement;
+        $this->id = $id;
     }
 
     /**

@@ -6,7 +6,7 @@ use App\Core\Model;
 
 class Winning extends Model
 {
-    protected $id;
+    protected $placement;
     protected $id_match;
     protected $prize;
     protected $id_zvierata;
@@ -14,17 +14,17 @@ class Winning extends Model
     /**
      * @return mixed
      */
-    public function getID()
+    public function getPlacement()
     {
-        return $this->id;
+        return $this->placement;
     }
 
     /**
      * @param mixed $placement
      */
-    public function setId($id): void
+    public function setPlacement($placement): void
     {
-        $this->id = $id;
+        $this->placement = $placement;
     }
 
     /**
