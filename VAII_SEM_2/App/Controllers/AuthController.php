@@ -93,11 +93,27 @@ class AuthController extends AControllerBase
                 jedno veľké písmeno a aspoň jeden špecialny znak']);
             }
             $user->setPassword(password_hash($formData['password'],PASSWORD_DEFAULT));
+            if (isset($formData['first_name']))
+            {
+                $user->setFirstName($formData['first_name']);
+            }
+            if (isset($formData['last_name']))
+            {
+                $user->setLastName($formData['last_name']);
+            }
+            if (isset($formData['email']))
+            {
+                $user->setEmail($formData['email']);
+            }
+            if (isset($formData['city']))
+            {
+                $user->setCity($formData['city']);
+            }
             $registered = $this->app->getAuth()->register($formData['username']);
-            if ($registered) {
+            if ($registered) {;
                 $user->save();
                  $this->app->getAuth()->login($formData['username'], $formData['password']);
-                return $this->redirect('?c=admin');
+                return $this->redirect('?c=home');
             }
         }
 

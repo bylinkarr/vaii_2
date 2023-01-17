@@ -46,4 +46,6 @@ interface IAuthenticator
      * @return bool
      */
     function isLogged(): bool;
+
+    public function isAdmin(): bool;
 }

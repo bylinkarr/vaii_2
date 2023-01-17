@@ -11,10 +11,35 @@ class Owner extends Model
     protected $password;
     protected $first_name;
     protected $last_name;
+    protected $email;
     protected $city;
     protected $admin;
 
 
+    function  __construct()
+    {
+        $this->first_name ="";
+        $this->last_name= "";
+        $this->email="";
+        $this->city="";
+        $this->admin=0;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email): void
+    {
+        $this->email = $email;
+    }
 
     public function getAllAnimals()
     {

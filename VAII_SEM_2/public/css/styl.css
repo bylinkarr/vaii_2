@@ -1,14 +1,20 @@
-
+ html{
+     margin: 0;
+     height: 100%;
+     width: 100%;
+ }
 body {
     background-color: #cccccc;
-
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
 }
 .nav {
     display: block;
-    z-index:1;
     overflow: hidden;
     background-color: darkslategray;
     position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%
 }
@@ -36,31 +42,36 @@ body {
     width: 50px;
 
 }
+.nav .nav-icon
+{
+    display: none;
+}
 .nav a.login,a.signout {
     float: right;
     background-color: #5c7e59;
     color: white;
 }
-
+.txt a
+{
+    float: right;
+}
 .nav span.txt {
     float: right;
     color: white;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 15px;
     font-style: oblique;
+    display: flex;
+    align-items: baseline;
 }
-
 .img_logo {
     width: 50px;
     background-color: orange;
     position: center;
 }
-
 .title-text
 {
     position:relative;
-
     padding-left: 20%;
     padding-top: 10%;
     font-size: 50px;
@@ -68,19 +79,17 @@ body {
     display: flex;
     top: inherit;
 }
-
 .nav ul
 {
     margin: 0;
     padding: 0;
 }
-
 .title-img
 {
     position: relative;
     width: 100%;
     height: 600px;
-
+    padding-top: 10%;
 
 }
 .title-img::before {
@@ -91,15 +100,13 @@ body {
     background-attachment: fixed;
     background-position: center center;
     opacity: 0.5;
-    top: 58px;
+    top: 15%;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
     z-index: -1;
-
 }
-
 .under-text
 {
     padding-left: 20%;
@@ -107,10 +114,7 @@ body {
     color: darkslategray;
     font-weight: bold;
     padding-right: 25%;
-
-
 }
-
 .title-button
 {
     background-color: darkslategray;
@@ -124,41 +128,36 @@ body {
     border-radius: 20%;
     display: flex;
 }
-
 .img-left
 {
-    padding: 5% 10% 5% 10%;
+    padding: 10% 10% 15% 10%;
     display: flex;
-    float: left;
-
+    float: left
 }
 .flex
 {
-    padding-bottom: 10%;
     display: inline;
     height: auto;
 }
-
 .nadpis1
 {
-    padding-left: 12%;
     padding-top: 5%;
     padding-bottom: 2%;
     margin: 0;
     font-size: 40px;
     font-weight: bolder;
+    position: relative;
 }
-
 .right-text
 {
-    padding-left: 12%;
     padding-right: 10%;
     font-size: medium;
     color: darkslategray;
     font-weight: bold;
-
 }
-
+.s {
+    padding-top: 10%;
+}
 .foot
 {
     width: 100%;
@@ -167,27 +166,81 @@ body {
     text-align: center;
     padding-bottom: 2%;
     padding-top: 2%;
-    position: relative;
-    bottom: 0;
     float: left;
+    margin-top: calc(80vh - 100px);
+}
+.regdiv
+{
+    display: flex;
 }
 .nn
 {
     display: flex;
 }
-
-.error
+#nadpis
 {
-
+    width: 100%;
 }
+#koment
+{
+    width: 100%;
+    height: 300px;
+    resize: none;
+}
+#pridavanie
+{
+    display: none;
+    border: 5px solid darkgrey;
+    border-radius: 5px;
+}
+ .tb{
+     margin: 50px;
+     padding-top: 5%;
+     padding-left: 12%;
+     padding-right: 12%;
+     height: auto;
+    position: relative;
+ }
+ .tbb
+ {
+     overflow-x:auto;
+     height: 500px;
 
+
+ }
+ .col-md-8
+ {
+     width: 100%;
+ }
+ .tabulka
+ {
+     border-collapse: collapse;
+     width: 100%;
+     margin-right: 0;
+     border: 5px solid firebrick;
+     position:relative;
+
+ }
+ .empty{
+     margin: 50px;
+     position: relative;
+ }
+
+ .checked {
+     color: yellow;
+ }
+
+ th
+ {
+     top:0;
+     position: sticky;
+     background-color: #cfd7ff;
+ }
 th,td {
     text-align: center;
     padding: 12px;
     border: 2px solid #45a049;
-
 }
-
 .tabulka tr:nth-child(2n+1)
 {
 
@@ -199,40 +252,41 @@ th,td {
     background-color: #ffe2f2;
 }
 
-.tabulka tr:first-child
-{
-    background-color: #cfd7ff;
-}
-
 .tabulka tr:hover {
     background-color: red;
 }
-
-
-.tabulka
-{
-    border-collapse: collapse;
-    width: 100%;
-    border: 5px solid firebrick;
-    position: relative;
-
-
+.addAnimalInput{
+    border: none;
+    padding-bottom: 25px;
+    padding-left: 8px;
+    box-sizing: border-box;
 }
 
-.tb{
-    margin: 3%;
-}
-.tbb
-{
-    overflow-x:auto;
 
+.addAnimalInput a,button {
+    padding: 10px;
+    background: 0;
+    border: 0;
 }
+.addAnimalInput label {
+    display: flex;
+    align-items: center;
+}
+
+ .addAnimalInput input {
+     margin: 2%;
+ }
+
 .pwd
 {
     display: flex;
+    align-items: center;
+
 }
-
-
+.pwd label, .pwd input
+{
+    margin: 5px;
+}
 input[type=text], select {
    _width: 30%;
     _padding: 12px 20px;
@@ -246,22 +300,15 @@ input[type=text], select {
 
 }
 
-
-
-
-
 .sel {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
 }
-
 .formular
 {
-
     margin: 3%;
 }
-
 .casti
 {
     display: inline-grid;
@@ -278,9 +325,7 @@ input[type=text], select {
     padding: 4%;
     font-weight: bolder;
     width: 100%;
-
 }
-
 .imgs {
     width: 200px;
     height: 200px;
@@ -308,4 +353,81 @@ input[type=text], select {
     float: left;
     position: relative;
 }
+.edit
+{
+   display: contents;
+}
 
+.edit #AJ
+{
+    padding-left: 30%;
+}
+
+.hviezdy
+{
+    display: flex;
+}
+
+#selectorForAdd
+{
+    border-radius: 3%;
+    border: none;
+}
+
+ #selectorForAdd option:hover
+ {
+     color: #cfd7ff;
+ }
+
+.card-body span {
+    display: flex;
+    justify-content: flex-end;
+    font-size: small;
+    color: #cccccc;
+}
+ @media screen and (max-width: 770px) {
+    .nav {
+        position: relative;
+        display: grid;
+    }
+     #selectors {
+         width: 100%;
+     }
+     .addAnimalInput
+     {
+         flex-direction: column;
+     }
+     #AJ,#delete-animal
+     {
+         display: flex !important;
+     }
+     .pwd
+     {
+         flex-direction: column;
+         align-items: center;
+     }
+ }
+
+ @media screen and (max-width: 330px) {
+     .tb
+     {
+         margin-left: 0;
+         margin-right: 0;
+     }
+     .img-left
+     {
+         padding: 0;
+     }
+     .title-img
+     {
+         display: none;
+     }
+     .regdiv
+     {
+         flex-direction: column
+     }
+     .form-signin
+     {
+         padding: 0;
+     }
+ }

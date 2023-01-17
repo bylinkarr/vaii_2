@@ -3,6 +3,7 @@
 namespace App\Auth;
 
 use App\Core\IAuthenticator;
+use App\Models\Owner;
 
 /**
  * Class DummyAuthenticator
@@ -86,5 +87,13 @@ class DummyAuthenticator implements IAuthenticator
     function getLoggedUserId(): mixed
     {
         return $_SESSION['user'];
+    }
+
+    public function isAdmin(): bool
+    {
+        $ow =Owner::getOne($this->getLoggedUserId());
+        if(isset($ow))
+            return   $ow->getAdmin()==1;
+        return false;
     }
 }

@@ -1,5 +1,4 @@
 <?php /** @var \App\Core\IAuthenticator $auth */ ?>
-
 <div class="container-fluid t-5">
     <div class="row t-5">
         <div class="col t-5">

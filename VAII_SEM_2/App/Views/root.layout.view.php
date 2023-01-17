@@ -20,32 +20,32 @@
     <script src="public/js/script.js"></script>
 </head>
 <body>
-<div class="nav">
+    <div class="nav">
         <a class="logo" href="?c=home">
              <img class="img_logo" src="public/images/logo.png" title="<?= \App\Config\Configuration::APP_NAME ?>"
                 _title="<?= \App\Config\Configuration::APP_NAME ?>">
-                </a>
+        </a>
         <a href="?c=home">Home</a>
-    <?php if (!$auth->isLogged()) { ?>
-        <a href="<?= \App\Config\Configuration::REGISTER_URL ?>">Register</a>
-    <?php } ?>
+        <?php if (!$auth->isLogged()) { ?>
+            <a href="<?= \App\Config\Configuration::REGISTER_URL ?>">Register</a>
+        <?php } ?>
         <?php if ($auth->isLogged()) { ?>
-            <a href="?c=home&a=reg">Formulár pre registráciu</a>
+            <a href="?c=animals">Zvieratá</a>
+            <a href="?c=matches">Zápasy</a>
+            <?php if ($auth->isAdmin()) { ?>
+                <a href="?c=matches&a=create">Pridanie Zápasu</a>
+                <a href="?c=owner&a=uzivatelia">Uživatelia</a>
+            <?php } ?>
+            <a href="?c=evaluations">Hodnotenia zápasov</a>
             <a class="signout" href="?c=auth&a=logout">Odhlásenie</a>
-            <span class="txt">Prihlásený používateľ: <b><?= $auth->getLoggedUserName() ?></b></span>
-                    <a href="?c=matches">Zápasy</a>
-                     <a href="?c=animals">Zvieratá</a>
-
-
-            </li>
-            </ul>
+            <span class="txt">Prihlásený používateľ: <a href="?c=owner"><?= $auth->getLoggedUserName() ?></a></span>
         <?php } else { ?>
             <a class="login" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Prihlásenie</a>
         <?php } ?>
     </div>
-    <div class="web-content">
+    <div>
         <?= $contentHTML ?>
     </div>
-</div>
+    <div class="foot" id="foot" >Copyright © 2022 , designed & developed by Peter Neupauer</div>
 </body>
 </html>

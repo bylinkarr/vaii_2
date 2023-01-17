@@ -6,7 +6,6 @@ use App\Models\Owner;
 
 class OwnerAuthenticator extends DummyAuthenticator
 {
-    private bool $isA;
     public function login($username, $password): bool
     {
 
@@ -14,14 +13,6 @@ class OwnerAuthenticator extends DummyAuthenticator
         if (count($prihlasenie) > 0) {
             if (password_verify($password, $prihlasenie[0]->getPassword())) {
                 $_SESSION['user'] = $username;
-                if($prihlasenie[0]->getAdmin() == 1){
-                    $this->isA=true;
-                }
-                else
-                {
-                    $this->isA=false;
-
-                }
                 return true;
             }
         }
@@ -38,6 +29,20 @@ class OwnerAuthenticator extends DummyAuthenticator
 
     public function isAdmin(): bool
     {
-        return $this->isA;
+        $ow =Owner::getOne($this->getLoggedUserId());
+        if(isset($ow))
+        return   $ow->getAdmin()==1;
+        return false;
+    }
+
+    function getLoggedUserId(): mixed
+    {
+        $user =$_SESSION['user'];
+        $ow =Owner::getAll("username = '$user'");
+        if(count($ow)>0)
+        {
+            return $ow[0]->getId();
+        }
+        return 0;
     }
 }
