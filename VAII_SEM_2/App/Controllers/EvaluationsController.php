@@ -89,7 +89,9 @@ class EvaluationsController extends AControllerBase
             return $this->json($hodnotenie);
         }
         $hodnotenie->setComment($data->comment);
+        if (isset($data->star))
         $hodnotenie->setStar($data->star);
+        else $hodnotenie->setStar(0);
         if ($data->selected == 0) {
             return $this->json($hodnotenie);
         }

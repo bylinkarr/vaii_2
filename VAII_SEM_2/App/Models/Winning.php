@@ -7,6 +7,7 @@ use App\Core\Model;
 class Winning extends Model
 {
     protected $placement;
+    protected $id;
     protected $id_match;
     protected $prize;
     protected $id_zvierata;

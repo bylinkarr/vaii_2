@@ -452,7 +452,7 @@ if (window.location.href === lhp+"?c=matches" ) {
                             let meno = await this.getNameOfAnimal(info.id_zvierata);
                             html = ` 
                                     <tr>
-                                          <td>${info.id} </td>  
+                                          <td>${info.placement} </td>  
                                           <td>${info.prize} </td>  
                                           <td>${meno} </td>  
                                     </tr> `
@@ -639,6 +639,7 @@ if (window.location.href === lhp+"?c=evaluations" ) {
                     document.getElementById("pridajHodnotenie").value =id_e.dataset.value;
                     document.getElementById("stars").dataset.value=data.star;
                     setStars( document.getElementById("stars"));
+                document.getElementById("error").innerText = "";
                 addH();
             } catch
                 (e) {
@@ -668,13 +669,13 @@ if (window.location.href === lhp+"?c=evaluations" ) {
        {
            error.innerText+= "Vyberte zápas";
        }
-        else if (obj.user_id===null)
-       {
-           error.innerText+= "Hodnotenie pre daný zápas už je vytvorené! ";
-       }
        else if (obj.star===null)
        {
            error.innerText+= "Zadajte hodnotenie! ";
+       }
+        else if (obj.user_id===null)
+       {
+           error.innerText+= "Hodnotenie pre daný zápas už je vytvorené! ";
        }
 
    }
@@ -743,6 +744,7 @@ function clearInputs() {
         document.getElementById("weight").value = "";
         document.getElementById("AJ").value = "";
     } else {
+        document.getElementById("error").innerText = "";
         document.getElementById("nadpis").value ="";
         document.getElementById("koment").value = "";
         document.getElementById("selectorForAdd").value = 0;
